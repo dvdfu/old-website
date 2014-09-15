@@ -1,0 +1,16 @@
+body {
+	background-color: #2a2222;
+}
+
+.circle {
+	height: 160px;
+	width: 160px;
+	background-color: #ffffcc;
+	border-radius: 100%;
+	position: absolute;
+    left: 50%;
+    margin-left: -80px;
+    top: 50%;
+    margin-top: -80px;
+    box-shadow: 10px 10px; 
+}
