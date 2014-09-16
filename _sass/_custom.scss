@@ -1,16 +1,22 @@
 body {
-	background-color: #2a2222;
+	background-color: #2a2222 !important;
 }
 
 .circle {
-	height: 160px;
-	width: 160px;
+	height: 80px;
+	width: 80px;
 	background-color: #ffffcc;
 	border-radius: 100%;
 	position: absolute;
-    left: 50%;
-    margin-left: -80px;
-    top: 50%;
-    margin-top: -80px;
-    box-shadow: 10px 10px; 
+    margin-left: -40px;
+    margin-top: -40px;
+    // box-shadow: 10px 10px; 
+}
+
+.unclicked-circle {
+	
+}
+
+.clicked-circle {
+
 }
