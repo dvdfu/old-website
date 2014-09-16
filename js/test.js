@@ -1,13 +1,14 @@
 var numCircles = 6;
-var xScreenCenter = 600;
-var yScreenCenter = 300;
-var circleRadius = 240;
+var xScreenCenter = $(window).width() / 2;
+var xRingCenter = $(window).width() / 4;
+var yRingCenter = $(window).height() / 2;
+var ringRadius = 160;
 var circleCentered;
 
 $(document).ready(function() {
 	$(".circle").click(function(event) {
 		var circle = $(this);
-		if (circle.attr("clicked") === "0") {
+		if (circle.attr("clicked") == 0) {
 			if (circleCentered != null) {
 				circleExit(circleCentered);
 			}
@@ -19,41 +20,47 @@ $(document).ready(function() {
 
 function setCirclePositions () {
 	for (var i = 1; i <= numCircles; i++) {
-		var theta = Math.PI * 3 / 2 + Math.PI * 2 * (i - 1) / numCircles / 3;
 		var circle = $("#circle-" + i);
-		var x = xScreenCenter + Math.cos(theta) * circleRadius;
-		var y = yScreenCenter + Math.sin(theta) * circleRadius;
+		var theta = (Math.PI * 2 * (i - 1) + Math.PI) / numCircles;
+		var x = xRingCenter + Math.cos(theta) * ringRadius
+	;
+		var y = yRingCenter + Math.sin(theta) * ringRadius
+	;
 		circle.attr("clicked", 0);
 		circle.attr("y-orig", y);
 		circle.attr("x-orig", x);
-		circle.offset({
-			top: y,
-			left: x,
-		});
+		circle.animate({
+			"top": y,
+			"left": x
+		}, 600);
 	}
+	// circleEnter($("#circle-1"));
 }
 
 function circleEnter(circle) {
 	circleCentered = circle;
+	var w = ringRadius
+ * 2 - 120;
 	circle.animate({
-		"width": 320,
-		"height": 320,
-		"margin-left": -160,
-		"margin-top": -160,
-		"top": yScreenCenter,
-		"left": xScreenCenter
+		"width": w,
+		"height": w,
+		"margin-left": -w / 2,
+		"margin-top": -w / 2,
+		"top": yRingCenter,
+		"left": xRingCenter
 	}, 600);
 	circle.attr("clicked", 1);
 }
 
 function circleExit(circle) {
+	var w = 80;
 	circle.animate({
-		"width": 80,
-		"height": 80,
-		"margin-left": -40,
-		"margin-top": -40,
-		"top": circle.attr("y-orig"),
-		"left": circle.attr("x-orig")
+		"width": w,
+		"height": w,
+		"margin-left": -w / 2,
+		"margin-top": -w / 2,
+		"top": circle.attr('y-orig'),
+		"left": circle.attr('x-orig')
 	}, 600);
 	circle.attr("clicked", 0);
 }

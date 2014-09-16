@@ -6,28 +6,33 @@ body {
 }
 
 .circle {
-	height: 80px;
+	position: fixed;
 	width: 80px;
+	height: 80px;
+    margin-left: -40px;
+    margin-top: -40px;
+    left: 25%;
+    top: 50%;
 	background-color: $yellow-white;
 	border-radius: 100%;
 	position: absolute;
-    margin-left: -40px;
-    margin-top: -40px;
+	vertical-align: middle;
     // box-shadow: 10px 10px; 
 }
 
-.unclicked-circle {
-	
-}
-
-.clicked-circle {
-
+.panel {
+	position: fixed;
+	width: 50%;
+	height: 100%;
+	left: 50%;
+	background-color: $yellow-white;
 }
 
 h1 {
 	font-size: 600%;
 	font-family: OstrichRegular;
-	color: $yellow-white;
+	color: $black-brown;
+	text-align: center;
 }
 
 @font-face {
