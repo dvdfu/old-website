@@ -22,10 +22,11 @@ body {
 
 .panel {
 	position: fixed;
-	width: 50%;
+	width: 38%;
 	height: 100%;
-	left: 50%;
+	left: 100%;
 	background-color: $yellow-white;
+	padding: 100px 50px 100px 50px;
 }
 
 h1 {
