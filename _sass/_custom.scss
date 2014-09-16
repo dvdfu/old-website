@@ -1,11 +1,14 @@
+$black-brown: #2a2222;
+$yellow-white: #ffffcc;
+
 body {
-	background-color: #2a2222 !important;
+	background-color: $black-brown !important;
 }
 
 .circle {
 	height: 80px;
 	width: 80px;
-	background-color: #ffffcc;
+	background-color: $yellow-white;
 	border-radius: 100%;
 	position: absolute;
     margin-left: -40px;
@@ -19,4 +22,15 @@ body {
 
 .clicked-circle {
 
+}
+
+h1 {
+	font-size: 600%;
+	font-family: OstrichRegular;
+	color: $yellow-white;
+}
+
+@font-face {
+    font-family: OstrichRegular;
+    src: url("/fonts/ostrich-rounded.ttf");
 }
