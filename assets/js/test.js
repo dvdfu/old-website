@@ -46,7 +46,7 @@ function setCirclePositions () {
 
 function circleEnter(circle) {
 	circleCentered = circle;
-	var w = ringRadius * 2 - 120;
+	var w = ringRadius * 2 - 140;
 	circle.animate({
 		"width": w,
 		"height": w,
