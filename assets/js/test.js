@@ -2,7 +2,7 @@ var numCircles = 6;
 var xScreenCenter = $(window).width() / 2;
 var xRingCenter = $(window).width() / 4;
 var yRingCenter = $(window).height() / 2;
-var ringRadius = 160;
+var ringRadius = 180;
 var circleCentered;
 var animShort = 400;
 var animLong = 800;
@@ -62,7 +62,7 @@ function circleEnter(circle) {
 }
 
 function circleExit(circle) {
-	var w = 80;
+	var w = 100;
 	circle.animate({
 		"width": w,
 		"height": w,
