@@ -1,0 +1,20 @@
+---
+layout: post
+title: cool stuff today after a bit more reading maybe
+date: '2014-04-27T23:50:00-04:00'
+tags: []
+tumblr_url: http://dvdfu.tumblr.com/post/84094647850/cool-stuff-today-after-a-bit-more-reading-maybe
+---
+<img src="http://38.media.tumblr.com/514149e65490b301169c3d6afbe3cfae/tumblr_n4q2o8PWUJ1txq5f5o1_1280.png"/><br/><img src="http://33.media.tumblr.com/1862574858afcb18c705b7421b0fccdb/tumblr_n4q2o8PWUJ1txq5f5o2_1280.png"/><br/><br/><p>Cool stuff today!</p>
+<p>After a bit more reading, maybe Box2D isn&#8217;t the best idea for a 2D platformer. I got it to do some really cool physics stuff, but overall it&#8217;s a lot more than required for simpler collisions. So I got rid of all that and rewrote really simple game object classes (along with classes for animation and input). I borrowed the neat little &#8220;debug rendering&#8221; from Box2D, which you can see in the picture above.</p>
+<p>Plus, I made a somewhat more optimized map loader: instead of placing each block as its own square tile, the loader scans for successive rows and columns of blocks, and adds a bigger block in as one object. The extra loading time is a non-factor and I can picture this significantly reducing collision operation times or even glitchy collisions.</p>
+<p>Then I finally got Github to do what I want, so overall a really good day for progress.</p>
+<p>On one last note, here is a working rendering order, since up until now rendering has been flickering or delaying:</p>
+<ul><li>register key inputs</li>
+<li>move and THEN <span>update character</span></li>
+<li>move and THEN <span>update camera</span></li>
+<li><span>set tiled map renderer to camera</span></li>
+<li><span>update sprite/shape batches using camera matrix</span></li>
+<li><span>clear screen</span></li>
+<li><span>draw objects, front-most objects last</span></li>
+</ul>

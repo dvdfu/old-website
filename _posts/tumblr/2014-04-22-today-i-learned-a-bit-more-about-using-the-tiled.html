@@ -1,0 +1,13 @@
+---
+layout: post
+title: today i learned a bit more about using the tiled
+date: '2014-04-22T21:00:00-04:00'
+tags: []
+tumblr_url: http://dvdfu.tumblr.com/post/83571079589/today-i-learned-a-bit-more-about-using-the-tiled
+---
+<img src="http://38.media.tumblr.com/482b3493a6845ac330dc679181964561/tumblr_n4glhfSu6A1txq5f5o1_r1_400.png"/><br/><img src="http://31.media.tumblr.com/a832d85059b1b972761c742504a19a03/tumblr_n4glhfSu6A1txq5f5o3_400.png"/><br/><img src="http://38.media.tumblr.com/6b0bf94235bdb62237b1f17575d21ec2/tumblr_n4glhfSu6A1txq5f5o2_r1_400.png"/><br/><img src="http://31.media.tumblr.com/bd121a744a10360e64b970a00b2e6d8e/tumblr_n4glhfSu6A1txq5f5o4_400.png"/><br/><br/><p>Today I learned a bit more about using the Tiled and Box2D tools in libgdx. A did a quick exercise to load maps:</p>
+<ol><li>Using Tiled, I created very simple tiled maps (on the right) and saved the .tmx and tileset image files into the game assets folder</li>
+<li>I read the files and iterated through each tile on a specified tile layer. Non-null tiles were given &#8220;bodies&#8221; and added to the &#8220;world&#8221;</li>
+<li>The map is drawn using a camera and the Box2D debugger renderer, i.e. there were no sprites used, only the outlines as specified when I define the body shapes</li>
+</ol><p>There is a much more in-depth implementation of Box2D which involves specifying metrics, body properties, and more things I would use if I were interested in a physics-heavy game.</p>
+<p>I neglected using a tool that chains connected bodies, which would be useful for solid platformer blocks in avoiding &#8220;ghost&#8221; collisions. It&#8217;s something I&#8217;ll approach when I have a greater understanding of Box2D terminology. Box2D seems like a pretty useful thing to learn, especially considering it&#8217;s cross-platform, so I&#8217;ll have that if I ever jump to Flash or C++. Apparently games on the Wii and DS have used Box2D, if you can trust Wikipedia.</p>

@@ -1,0 +1,12 @@
+---
+layout: post
+title: these are some simple character sprites i designed
+date: '2014-05-28T22:45:00-04:00'
+tags: []
+tumblr_url: http://dvdfu.tumblr.com/post/87163532339/these-are-some-simple-character-sprites-i-designed
+---
+<img src="http://38.media.tumblr.com/96230621aae8be69b63ef53b274005d4/tumblr_n6bebjDSdp1txq5f5o1_250.gif"/><br/><img src="http://31.media.tumblr.com/7edd2d990fd397553cdd4a35ac33cade/tumblr_n6bebjDSdp1txq5f5o2_250.gif"/><br/><br/><p>These are some simple character sprites I designed for no reason other than to see what I&#8217;d come up with. I won&#8217;t lie, Cave Story inspired me, but there are only so many ways you can draw a cartoonish humanoid in a 16x16 pixel sprite.</p>
+<p>Game development has slowed down a bit because I&#8217;ve been taking some time to learn front-end web development. It&#8217;s a useful skill to have and great way to present yourself online.</p>
+<p>I&#8217;m also reconsidering my entire approach to libgdx: I hadn&#8217;t realized the importance of Scene2D package. It abstracts away object representation on the screen, making object handling and UI much simpler.</p>
+<p>For a while, a big problem for me was figuring out how to handle object detection. Up until now I had array lists of objects which the game would loop through every tick to check for collisions. The platformer mock-up I posted earlier had very refined collision, but I knew it would break if I used the same system for, say, a top-down shooter, which would have hundreds of bullets flying everywhere. I had to start looking into quad-trees and ways to make collisions more efficient, while also holding all objects in a data structure that could somehow sort objects based on depth so that they would render in the proper order. I know of ways to do this but their implementations would be nightmarish for me and I wasn&#8217;t confident in their run time.</p>
+<p>So for now I&#8217;m going to learn how to use Scene2D. I will return to more low-level implementations when I have a stronger grasp of those concepts.</p>

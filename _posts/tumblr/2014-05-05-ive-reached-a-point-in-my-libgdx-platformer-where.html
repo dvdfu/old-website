@@ -1,0 +1,12 @@
+---
+layout: post
+title: ive reached a point in my libgdx platformer where
+date: '2014-05-05T23:32:00-04:00'
+tags: []
+tumblr_url: http://dvdfu.tumblr.com/post/84891872534/ive-reached-a-point-in-my-libgdx-platformer-where
+---
+<img src="http://33.media.tumblr.com/672792677231949fb36ab679dcc79023/tumblr_n54v5x6Gs81txq5f5o1_1280.png"/><br/><p>I&#8217;ve reached a point in my libgdx Platformer where the basics have been fully implemented and polished. All that&#8217;s left to do now depends on what kind of Platformer I want to make&#8230;and going further in that direction abandons the general Platformer engine I strived to make. I will do something eventually, but the rest of the implementation is a lot of cruel work. So I shifted focus for now.</p>
+<p>I&#8217;ve been starting to learn Ruby, Python, and a bit of web development, but a lot of it doesn&#8217;t have the same instant-gratification as game-making does. I whipped a cool little game pictured above.</p>
+<p>It&#8217;s in the same vein as Osmos: you grow by absorbing smaller circular objects around you. Everything in this game is very straightforward to program. The main challenge is&#8230;what is the upper limit of growth? The game handles fine up to several millions of pixels in radius - the camera just zooms out accordingly. But past that, it breaks.</p>
+<p>For that reason, I had to periodically &#8220;shrink&#8221; the entire game, seemlessly. Shrinking everything&#8217;s x-y coordinates and radii seems to work, but then the camera complains. Because zooming and panning are smoothed, and not instantaneous, camera movement is erratic whenever the shrinking happens. The answer lies in a simple bit of math. But I can&#8217;t really see the strategy working when I have, say, actual images, backgrounds, and a GUI, or whatever.</p>
+<p>Oh, and you can move the player using accelerometers on mobile. How cool is that?</p>

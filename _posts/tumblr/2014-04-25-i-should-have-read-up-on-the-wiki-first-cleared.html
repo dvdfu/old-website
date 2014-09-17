@@ -1,0 +1,16 @@
+---
+layout: post
+title: i should have read up on the wiki first cleared
+date: '2014-04-25T19:59:00-04:00'
+tags: []
+tumblr_url: http://dvdfu.tumblr.com/post/83861585999/i-should-have-read-up-on-the-wiki-first-cleared
+---
+<img src="http://38.media.tumblr.com/5062f5769cdc89078214d8e97c34ffaa/tumblr_n4m0zdMlZp1txq5f5o2_r1_1280.png"/><br/><img src="http://38.media.tumblr.com/adeceaf706421e547d9c632fe169407d/tumblr_n4m0zdMlZp1txq5f5o3_r1_1280.png"/><br/><br/><p>I should have read up on the wiki first - cleared up a lot of information, especially about image rendering terminology. For future reference, I&#8217;m rephrasing here:</p>
+<ul><li>A Texture is a decoded image file with image size dimensions in powers of two. It is uploaded to the GPU</li>
+<li>A TextureRegion is cropped portion of a texture; both TextureRegions and Textures can be drawn. Texture portions can be manually drawn using SpriteBatch functions, but TextureRegions save a little work</li>
+<li>Sprite further extends from TextureRegions in that they can be rotated, tinted, blended, etc.</li>
+<li>All of the above (and others) are drawn using SpriteBatch, which is essentially a single image + reference information that can more efficiently draw images than having each separate image uploaded and called from the GPU</li>
+<li>TextureAtlas is used to load images from the file system that have already been packed into a large &#8220;atlas&#8221; image, the benefit being the initial resource loading is more optimized.</li>
+</ul><p>Anyway, I&#8217;ve spent most of the past few days learning more than anything. It turns out camera operations are fairly straightforward for panning and zooming - I just have to declare variables for camera coordinates and zoom, so I can render GUI related things properly. I had my head wrapped around the idea that camera functions required a lot of matrix calculation, but that is all hidden through its implementation.</p>
+<p>I also looked into Bitmap Fonts. Heiro is a built-in libgdx tool that converts system fonts into Bitmap Fonts. Bitmap Fonts are packaged very similarly to Texture Atlases, but they also contain information in a .fnt file that associates each character image to an ASCII character. Bitmap Fonts are very lightweight and rasterized, making them perfect for 2D video games (but little else: they can&#8217;t be variably stretched, have effects added, and so on).</p>
+<p>While it is very easy to use Heiro and convert pre-existing fonts into usable Bitmap Fonts, I&#8217;m having a very hard time finding a program that will let me design my own Bitmap Fonts from scratch. As you can see in the second image, I have an alphabet just waiting to be used! But the programs I&#8217;ve come across are either not free, not supported by Linux, or incredibly outdated. It is possible, but VERY time consuming to write the .fnt file manually. Maybe I&#8217;ll write my own program! But it&#8217;s not a priority right now.</p>

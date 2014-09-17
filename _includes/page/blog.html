@@ -2,8 +2,15 @@
 	<h1>Dev Blog</h1>
 	<h2>games I'm making</h2>
 	<div class="divider"></div>
-	<p>Eeeeuuuggh<p>
+	<!-- <p>Eeeeuuuggh<p>
 	<div class="image-container">
 		<img src="/assets/img/2014-09-10-3.gif">
+	</div>
+ -->
+ 	<div class="panel-post">
+		{% for post in site.posts limit: 2 %}
+			<h2>{{ post.title }}</h2>
+			{{ post.excerpt }}
+		{% endfor %}
 	</div>
 </div>

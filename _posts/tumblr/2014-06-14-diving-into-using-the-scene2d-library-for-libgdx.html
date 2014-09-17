@@ -1,0 +1,14 @@
+---
+layout: post
+title: diving into using the scene2d library for libgdx
+date: '2014-06-14T17:37:00-04:00'
+tags:
+- libgdx
+- games
+- development
+tumblr_url: http://dvdfu.tumblr.com/post/88794975399/diving-into-using-the-scene2d-library-for-libgdx
+---
+<img src="http://38.media.tumblr.com/db988f8bf857dde01ad0651e433a3342/tumblr_n76hebr5hr1txq5f5o3_r1_400.gif"/><br/><img src="http://33.media.tumblr.com/7470d615531a206d882d42551bd7a20c/tumblr_n76hebr5hr1txq5f5o4_r1_400.gif"/><br/><br/><p>Diving into using the Scene2D library for libgdx. Pretty much eliminates anything remotely complicated when trying to implement a scene graph.</p>
+<p>I found out the way Scene2D implements collision detection using the exact same approach I&#8217;ve already used, which is a bit useless to me. Fortunately Scene2D makes it very easy to group objects, perform grouped object transformations/rotation/scaling, and sorts objects by render depth. If I&#8217;m smart about how I manage my game objects, collision handling shouldn&#8217;t be terribly slow. I would like to handle some of the nitty gritty programming parts of a game at some point, but I also don&#8217;t want to have to make a worse version of what already exists.</p>
+<p>The game pictured is derived from the Paper Plane microgame from the WarioWare series. You can steer the plane left or right, and it travels very quickly when pointed downward. I put in a trail of animated red petals (?) that is really just eye candy.</p>
+<p>Which reminds me to look into the particle effects tool for libgdx, although I&#8217;m not sure how it supports animated particles.</p>

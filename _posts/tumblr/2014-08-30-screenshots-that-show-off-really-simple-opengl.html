@@ -1,0 +1,11 @@
+---
+layout: post
+title: screenshots that show off really simple opengl
+date: '2014-08-30T21:55:00-04:00'
+tags: []
+tumblr_url: http://dvdfu.tumblr.com/post/96222107744/screenshots-that-show-off-really-simple-opengl
+---
+<img src="http://33.media.tumblr.com/4aa4cfede8fc10527427a958910371f3/tumblr_nb5ep225NK1txq5f5o1_1280.png"/><br/><img src="http://33.media.tumblr.com/62852e583f04caab70c571c5f83a12e1/tumblr_nb5ep225NK1txq5f5o2_1280.png"/><br/><br/><p>Screenshots that show off really simple OpenGL shaders. One of the reasons I chose to use libGDX is to have fine control over my game&#8217;s programming. Shaders are a really big part of that so I finally put some time into learning how to use them.</p>
+<p>libGDX lets you write C-style shaders in OpenGL&#8217;s shader language and are used in Java when read as a file or, strangely, entered as a Java string. Every pixel is processed through the shader pipeline by the GPU before being rendered. I render pixels in the first picture with lower opacity, so every new frame blends with the last, creating a blur effect, and with averaged R/G values in the second picture, casting a yellow hue. These are very dull examples, but with enough practice you can do some <a href="https://github.com/mattdesl/lwjgl-basics/wiki/ShaderLesson6">pretty</a> <a href="http://rotatingcanvas.com/fragment-shader-to-simulate-water-surface-in-libgdx/">amazing things</a>. Learning how to write good shaders is not my priority right now, but definitely a long-term goal.</p>
+<p>Slightly related, I learned how to use frame buffers. Previously, the way I achieved a &#8220;2x zoom&#8221; effect was simply by stretching the sprite batch and sprites individually. While sprites are stretched perfectly, their positions are stored as floats, so spacing between individual sprites may be 1 pixel and break the illusion of a pure 2x zoom. Now everything is rendered at 1x to a <em>frame buffer</em>, and the buffer is scaled using a nearest-neighbour filter. Performance also noticeably increased this way.</p>
+<p>In short, learning lower level processes in libGDX is both fun and useful</p>

@@ -1,0 +1,11 @@
+---
+layout: post
+title: heres a weird game ive been working on over the
+date: '2014-05-18T12:44:01-04:00'
+tags:
+- libgdx
+tumblr_url: http://dvdfu.tumblr.com/post/86120042484/heres-a-weird-game-ive-been-working-on-over-the
+---
+<img src="http://33.media.tumblr.com/20951af256bf1cd1c2bfbbd71f093579/tumblr_n5s3tdhin91txq5f5o1_500.png"/><br/><img src="http://31.media.tumblr.com/b43309bb0d90eb203dfcd778244341c3/tumblr_n5s3tdhin91txq5f5o2_500.png"/><br/><img src="http://38.media.tumblr.com/b4875784a8ecf813911fa856747f754c/tumblr_n5s3tdhin91txq5f5o3_500.png"/><br/><img src="http://38.media.tumblr.com/10dc1ea6afb7ec1dd6297230f7d274c3/tumblr_n5s3tdhin91txq5f5o4_250.gif"/><br/><br/><p>Here&#8217;s a weird game I&#8217;ve been working on over the weekend.</p>
+<p>It started as a recreation of the Glove Puncher game I posted earlier, but it kind of evolved into a shoot-em-up styled game. It&#8217;s very hard to explain. I hope I can actually see this idea to completion, I really want to start pushing games to the Google Play store (with or without advertisements).</p>
+<p>In terms of programming, I really focused on state-based object logic. Rather than determining action based on several to many different properties, each object can be only in one state, which is an enumerated value. For example, the blue rocks in the pictures have states like FALLING, COLLECTED, EXITED, and so on. Each object&#8217;s states are publicly available, and the current state it&#8217;s in can be retrieved. The main game&#8217;s update loop handles object actions based solely on state - it&#8217;s much more predictable and manageable. In terms of encapsulation I&#8217;m not sure how formal it is to have something like states publicly available&#8230;but it&#8217;s a prototype, anyway.</p>

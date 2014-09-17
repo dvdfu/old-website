@@ -11,10 +11,14 @@ $(document).ready(function() {
 	loadItems();
 	$(".circle").hover(function () {
 		var circle = $(this);
+		var icon = $('#icon-' + circle.attr('name'));
 		circle.css('background-color', '#ffffcc');
+		icon.css('color', '#22a044');
 	}, function () {
 		var circle = $(this);
+		var icon = $('#icon-' + circle.attr('name'));
 		circle.css('background-color', '#22a044');
+		icon.css('color', '#ffffcc');
 	});
 
 	$('.circle').click(function() {
