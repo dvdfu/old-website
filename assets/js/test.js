@@ -42,13 +42,11 @@ function setCirclePositions () {
 			}, animShort);
 		}
 	}
-	// circleEnter($("#circle-1"));
 }
 
 function circleEnter(circle) {
 	circleCentered = circle;
-	var w = ringRadius
- * 2 - 120;
+	var w = ringRadius * 2 - 120;
 	circle.animate({
 		"width": w,
 		"height": w,
@@ -57,8 +55,10 @@ function circleEnter(circle) {
 		"margin-top": -w / 2,
 		"top": yRingCenter,
 		"left": xRingCenter
-	}, animShort);
+	}, animShort, "swing", function() {	});
 	circle.attr("clicked", 1);
+	$(".panel-text").hide();
+	$("#" + circle.attr("name")).show();
 }
 
 function circleExit(circle) {
@@ -71,6 +71,6 @@ function circleExit(circle) {
 		"margin-top": -w / 2,
 		"top": circle.attr('y-orig'),
 		"left": circle.attr('x-orig')
-	}, animShort);
+	}, animShort, "swing", function() { });
 	circle.attr("clicked", 0);
 }

@@ -12,17 +12,19 @@ h1 {
 	font-family: OstrichRegular;
 	color: $black-brown;
 	text-align: center;
+	line-height: 40px;
 }
 
 h2 {
-	font-size: 300%;
-	color: $black-brown;
+	font-family: QuicksandRegular;
+	color: $green-blue;
 	text-align: center;
 }
 
 .icon {
 	color: $yellow-white;
 	line-height: inherit !important;
+	z-index: -1;
 }
 
 .circle {
@@ -35,8 +37,9 @@ h2 {
     margin-top: -40px;
 	background-color: $green-blue;
 	border-radius: 100%;
+	z-index: -2;
 
-    line-height: inherit;
+    line-height: 80px;
     text-align: center;
     vertical-align: middle;
     display: inline-block;
@@ -48,7 +51,11 @@ h2 {
 	height: 100%;
 	left: 100%;
 	background-color: $yellow-white;
-	padding: 100px 50px 100px 50px;
+	padding: 120px 50px 100px 50px;
+}
+
+.panel-text {
+
 }
 
 .divider {
@@ -60,5 +67,10 @@ h2 {
 
 @font-face {
     font-family: OstrichRegular;
-    src: url("/assets/fonts/ostrich-rounded.ttf");
+    src: url("/assets/fonts/ostrich-regular.ttf");
+}
+
+@font-face {
+    font-family: QuicksandRegular;
+    src: url("/assets/fonts/Quicksand-Regular.otf");
 }
