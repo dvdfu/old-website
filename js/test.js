@@ -29,12 +29,11 @@ $(document).ready(function() {
 			}
 			circleEnter(circle);
 		}
-		$('#main-box').attr('href');
 	});
 });
 
 function loadItems () {
-	$('#main-box').animate({
+	$('.panel').animate({
 		'left': '50%'
 	}, animLong);
 
