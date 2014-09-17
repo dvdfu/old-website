@@ -1,23 +1,45 @@
 $black-brown: #2a2222;
 $yellow-white: #ffffcc;
+$green-blue: #22a044;
+$white: #ffffff;
 
 body {
 	background-color: $black-brown !important;
 }
 
+h1 {
+	font-size: 600%;
+	font-family: OstrichRegular;
+	color: $black-brown;
+	text-align: center;
+}
+
+h2 {
+	font-size: 300%;
+	color: $black-brown;
+	text-align: center;
+}
+
+.icon {
+	color: $yellow-white;
+	line-height: inherit !important;
+}
+
 .circle {
 	position: fixed;
+    left: 25%;
+    top: 50%;
 	width: 80px;
 	height: 80px;
     margin-left: -40px;
     margin-top: -40px;
-    left: 25%;
-    top: 50%;
-	background-color: $yellow-white;
+	background-color: $green-blue;
 	border-radius: 100%;
-	position: absolute;
-	vertical-align: middle;
-    // box-shadow: 10px 10px; 
+
+    line-height: inherit;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .panel {
@@ -29,14 +51,14 @@ body {
 	padding: 100px 50px 100px 50px;
 }
 
-h1 {
-	font-size: 600%;
-	font-family: OstrichRegular;
-	color: $black-brown;
-	text-align: center;
+.divider {
+	background-color: $black-brown;
+	width: 100%;
+	height: 2px;
+	margin-bottom: 5%;
 }
 
 @font-face {
     font-family: OstrichRegular;
-    src: url("/fonts/ostrich-rounded.ttf");
+    src: url("/assets/fonts/ostrich-rounded.ttf");
 }

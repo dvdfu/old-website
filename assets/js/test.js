@@ -4,12 +4,13 @@ var xRingCenter = $(window).width() / 4;
 var yRingCenter = $(window).height() / 2;
 var ringRadius = 160;
 var circleCentered;
-var animationLength = 600;
+var animShort = 400;
+var animLong = 800;
 
 $(document).ready(function() {
 	$("#main-box").animate({
 		"left": "50%"
-	}, 1000);
+	}, animLong);
 	$(".circle").click(function(event) {
 		var circle = $(this);
 		if (circle.attr("clicked") == 0) {
@@ -18,6 +19,7 @@ $(document).ready(function() {
 			}
 			circleEnter(circle);
 		}
+		$("#main-box").attr("href");
 	});
 	setCirclePositions();
 });
@@ -37,7 +39,7 @@ function setCirclePositions () {
 			circle.animate({
 				"top": y,
 				"left": x
-			}, animationLength);
+			}, animShort);
 		}
 	}
 	// circleEnter($("#circle-1"));
@@ -50,11 +52,12 @@ function circleEnter(circle) {
 	circle.animate({
 		"width": w,
 		"height": w,
+		"line-height": w,
 		"margin-left": -w / 2,
 		"margin-top": -w / 2,
 		"top": yRingCenter,
 		"left": xRingCenter
-	}, animationLength);
+	}, animShort);
 	circle.attr("clicked", 1);
 }
 
@@ -63,10 +66,11 @@ function circleExit(circle) {
 	circle.animate({
 		"width": w,
 		"height": w,
+		"line-height": w,
 		"margin-left": -w / 2,
 		"margin-top": -w / 2,
 		"top": circle.attr('y-orig'),
 		"left": circle.attr('x-orig')
-	}, animationLength);
+	}, animShort);
 	circle.attr("clicked", 0);
 }
