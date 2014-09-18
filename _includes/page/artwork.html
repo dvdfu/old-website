@@ -2,18 +2,12 @@
 	<h1>Artwork</h1>
 	<h2>things I've drawn</h2>
 	<div class="divider"></div>
+	<p>Digital art is something on which I've spent a large part of my life. I'm a big fan of animation, cartoons, and video games, so most of my artwork depict characters and worlds from them. Here are just a few of my most recent drawings.</p>
 	<div class="panel-images">
-		<a href="/img/art/jinora.png" data-lightbox="art">
-			<img src="/img/previews/jinora.png" height="200px"></a>
-		<a href="/img/art/duckies.png" data-lightbox="art">
-			<img src="/img/previews/duckies.png" height="200px"></a>
-		<a href="/img/art/band.png" data-lightbox="art">
-			<img src="/img/previews/band.png" height="200px"></a>
-		<a href="/img/art/ponytones.png" data-lightbox="art">
-			<img src="/img/previews/ponytones.png" height="200px"></a>
-		<a href="/img/art/princesses.png" data-lightbox="art">
-			<img src="/img/previews/princesses.png" height="200px"></a>
-		<a href="/img/art/dota.png" data-lightbox="art">
-			<img src="/img/previews/dota.png" height="200px"></a>
+		{% for drawing in site.data.drawings %}
+		<a href="/img/art/{{ drawing.filename }}" data-lightbox="art">
+			<img src="/img/previews/{{ drawing.filename }}" height="200px">
+		</a>
+		{% endfor %}
 	</div>
 </div>

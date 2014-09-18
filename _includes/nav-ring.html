@@ -1,18 +1,5 @@
-<div class="circle" id="circle-1" name="about">
-	<span class="fa fa-user fa-4x icon" id="icon-about">
+{% for section in site.data.sections %}
+<div class="circle" id="circle-{{ section.id }}" name="{{ section.name }}">
+	<span class="fa fa-{{ section.icon }} fa-4x icon" id="icon-{{ section.name }}">
 </div>
-<div class="circle" id="circle-2" name="projects">
-	<span class="fa fa-wrench fa-4x icon" id="icon-projects">
-</div>
-<div class="circle" id="circle-3" name="artwork">
-	<span class="fa fa-pencil fa-4x icon" id="icon-artwork">
-</div>
-<div class="circle" id="circle-4" name="contact">
-	<span class="fa fa-envelope fa-4x icon" id="icon-contact">
-</div>
-<div class="circle" id="circle-5" name="resume">
-	<span class="fa fa-file-text fa-4x icon" id="icon-resume">
-</div>
-<div class="circle" id="circle-6" name="blog">
-	<span class="fa fa-tumblr fa-4x icon" id="icon-blog">
-</div>
+{% endfor %}

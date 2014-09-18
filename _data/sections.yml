@@ -1,0 +1,23 @@
+- id: 1
+  name: about
+  icon: user
+
+- id: 2
+  name: projects
+  icon: wrench
+
+- name: artwork
+  id: 3
+  icon: pencil
+
+- id: 4
+  name: contact
+  icon: envelope
+
+- id: 5
+  name: resume
+  icon: file-text
+
+- id: 6
+  name: blog
+  icon: tumblr
