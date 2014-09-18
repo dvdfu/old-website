@@ -4,15 +4,15 @@
 
 - id: 2
   name: projects
-  icon: wrench
+  icon: laptop
 
 - name: artwork
   id: 3
-  icon: pencil
+  icon: paint-brush
 
 - id: 4
   name: contact
-  icon: envelope
+  icon: at
 
 - id: 5
   name: resume
@@ -20,4 +20,4 @@
 
 - id: 6
   name: blog
-  icon: tumblr
+  icon: gamepad
