@@ -1,9 +1,3 @@
-- name: Personal Website
-  url: "http://dvdfu.github.io/"
-  date: 2014-09-01
-  description: "This website. Written from scratch in roughly three days as first steps into front-end web development. Minimalistic presentation with some interactive elements."
-  uses: "HTML, CSS, Javascript, jQuery, jekyll, Liquid, GitHub, Font Awesome, Lightbox"
-
 - name: Panic
   date: 2014-08-01
   image: "panic-1.gif"
@@ -13,5 +7,13 @@
 - name: FindMe
   url: "http://rwongone.github.io/battlehack/lost.html"
   date: 2014-05-01
+  image: "findme.png"
   description: "A collaborative web app written for PayPal's Battlehack. Developed in under a day in a group of four. The app supposedly matches lost and found items based on search criteria. Ultimately incomplete."
   uses: "HTML, CSS, Javascript, AngularJS, Parse, Google Maps API, PayPal API, Bootstrap"
+
+- name: Personal Website
+  url: "http://dvdfu.github.io/"
+  date: 2014-09-01
+  image: "website.png"
+  description: "This website. Written from scratch in roughly three days as first steps into front-end web development. Minimalistic presentation with some interactive elements."
+  uses: "HTML, CSS, Javascript, jQuery, jekyll, Liquid, GitHub, Font Awesome, Lightbox"
