@@ -1,7 +1,6 @@
-$black-brown: #2a2222;
+$black-brown: #222a2a;
 $yellow-white: #ffffcc;
 $green-blue: #22a044;
-$white: #ffffff;
 
 body {
 	background-color: $black-brown !important;
@@ -32,8 +31,14 @@ h3 {
 	font-family: QuicksandRegular;
 }
 
-img {
-	margin: 6px 6px 6px 6px;
+.artwork-images {
+	margin: 2% 2%;
+}
+
+.project-images {
+	position: relative;
+	width: 100%;
+	margin-bottom: 4%;
 }
 
 ul {
@@ -60,6 +65,13 @@ ul {
     text-align: center;
     vertical-align: middle;
     display: inline-block;
+
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .panel-bg {
@@ -86,7 +98,7 @@ ul {
 }
 
 .panel-text {
-	margin: 10px 50px 50px 50px;
+	margin: 2% 8% 8% 8%;
 }
 
 .panel-images {

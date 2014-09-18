@@ -39,7 +39,9 @@ function loadItems () {
 
 	for (var i = 1; i <= numCircles; i++) {
 		var circle = $('.circle-' + i);
-		var theta = (Math.PI * 2 * (i - 1) - Math.PI * 3) / numCircles;
+		var icon = $('.icon-' + circle.attr('name'));
+		icon.css('font-size', ringRadius / 4);
+		var theta = (Math.PI * 2 * (i - 1)) / numCircles - Math.PI / 2;
 		var x = xRingCenter + Math.cos(theta) * ringRadius;
 		var y = yRingCenter + Math.sin(theta) * ringRadius;
 		circle.attr('clicked', 0);
@@ -66,7 +68,12 @@ function circleEnter(circle) {
 		'left': xRingCenter
 	}, animShort, 'swing', function() {	});
 	circle.attr('clicked', 1);
-	
+
+	var icon = $('.icon-' + circle.attr('name'));
+	icon.animate({
+		'font-size': ringRadius / 2
+	}, animShort);
+
 	$('html, body').scrollTop(0);
 	$('.panel').css('left', '100%');
 	$('.panel').stop();
@@ -91,4 +98,9 @@ function circleExit(circle) {
 		'left': circle.attr('x-orig')
 	}, animShort, 'swing', function() { });
 	circle.attr('clicked', 0);
+
+	var icon = $('.icon-' + circle.attr('name'));
+	icon.animate({
+		'font-size': ringRadius / 4
+	}, animShort);
 }

@@ -6,6 +6,7 @@
 
 - name: Panic
   date: 2014-08-01
+  image: "panic-1.gif"
   description: "A 2D desktop game with arcade roots. The player avoids molten rock monsters for as long as possible while also preventing them from falling into and raising the lava below."
   uses: "Java, libGDX, OpenGL, GLSL, Android SDK, Gradle"
 

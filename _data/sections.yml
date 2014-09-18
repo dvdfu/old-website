@@ -3,39 +3,46 @@
   icon: user
   title: "David Fu"
   description: "about myself"
+  color: "#04422a"
 
 - num: 2
   id: projects
   icon: laptop
   title: "Projects"
   description: "things I code"
+  color: "#04422a"
 
 - num: 3
   id: artwork
   icon: paint-brush
   title: "Artwork"
   description: "stuff I draw"
+  color: "#04422a"
 
 - num: 4
   id: music
   icon: music
   title: "Arrangements"
   description: "songs I (re)create"
+  color: "#04422a"
 
 - num: 5
   id: contact
   icon: at
   title: "Social Media"
   description: "how to find me"
+  color: "#04422a"
 
 - num: 6
   id: resume
   icon: file-text
   title: "Resume"
   description: "if you're hiring"
+  color: "#04422a"
 
 - num: 7
   id: blog
   icon: gamepad
   title: "Game Dev Blog"
   description: "games in progress"
+  color: "#04422a"

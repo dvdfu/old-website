@@ -7,5 +7,10 @@
 		{% endif %}
 		<td style="float:right;"><small>{{ project.date | date: "%B %Y"}}</small></td>
 	</tr></table>
+	{% if project.image %}
+	<a href="/img/projects/{{ project.image }}" data-lightbox="{{ project.name }}">
+		<img src="/img/projects/{{ project.image }}" class="project-images">
+	</a>
+	{% endif %}
 	<p>{{ project.description }} <b>{{ project.uses }}.</b></p>
 {% endfor %}

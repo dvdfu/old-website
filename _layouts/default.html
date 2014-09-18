@@ -6,12 +6,14 @@
     <div class="panel panel-bg"></div>
     <div class="panel">
       {% for section in site.data.sections %}
-      <div class="panel-header {{ section.id }}">
+      <div class="panel-header {{ section.id }}" style="background-color: {{ section.color }};">
         <h1>{{ section.title }}</h1>
       </div>
       <div class="panel-text {{ section.id }}">
-        <h2>{{ section.description }}</h2>
-      {% include page/{{ section.id }}.html %}
+        <h2 style="color: {{ section.color }};">{{ section.description }}</h2>
+        <!-- <div class="divider"></div> -->
+        {% include page/{{ section.id }}.html %}
+        <!-- <div class="divider"></div> -->
       </div>
       {% endfor %}
     </div>
