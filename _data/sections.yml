@@ -10,14 +10,18 @@
   id: 3
   icon: paint-brush
 
-- id: 4
+- name: music
+  id: 4
+  icon: music
+
+- id: 5
   name: contact
   icon: at
 
-- id: 5
+- id: 6
   name: resume
   icon: file-text
 
-- id: 6
+- id: 7
   name: blog
   icon: gamepad

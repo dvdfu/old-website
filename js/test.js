@@ -1,4 +1,4 @@
-var numCircles = 6;
+var numCircles = 7;
 var xScreenCenter = $(window).width() / 2;
 var xRingCenter = $(window).width() / 4;
 var yRingCenter = $(window).height() / 2;

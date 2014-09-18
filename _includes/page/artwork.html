@@ -5,7 +5,7 @@
 	<p>Digital art is something on which I've spent a large part of my life. I'm a big fan of animation, cartoons, and video games, so most of my artwork depict characters and worlds from them. Here are just a few of my most recent drawings.</p>
 	<div class="panel-images">
 		{% for drawing in site.data.drawings %}
-		<a href="/img/art/{{ drawing.filename }}" data-lightbox="art">
+		<a href="/img/art/{{ drawing.filename }}" data-lightbox="art" data-title="{{ drawing.description }}">
 			<img src="/img/previews/{{ drawing.filename }}" width="200px">
 		</a>
 		{% endfor %}
