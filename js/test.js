@@ -66,7 +66,8 @@ function circleEnter(circle) {
 		'left': xRingCenter
 	}, animShort, 'swing', function() {	});
 	circle.attr('clicked', 1);
-
+	
+	$('html, body').scrollTop(0);
 	$('.panel').css('left', '100%');
 	$('.panel').stop();
 	$('.panel').animate({

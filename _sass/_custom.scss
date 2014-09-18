@@ -36,6 +36,10 @@ img {
 	margin: 6px 6px 6px 6px;
 }
 
+ul {
+	margin-left: 0px;
+}
+
 .icon {
 	color: $yellow-white;
 	line-height: inherit !important;
@@ -98,7 +102,6 @@ img {
 
 .contact {
 	text-align: center;
-	margin-left: 0px;
 }
 
 @font-face {
