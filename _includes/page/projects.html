@@ -2,5 +2,15 @@
 	<h1>Projects</h1>
 	<h2>stuff I've done</h2>
 	<div class="divider"></div>
-	<p>Under construction<p>
+	{% for project in site.data.projects %}
+		<table style="width:100%"><tr>
+			{% if project.url %}
+			<td style="float:left;"><a href="{{ project.url }}"><h3>{{ project.name }}</h3></a></td>
+			{% else %}
+			<td style="float:left;"><h3>{{ project.name }}</h3></td>
+			{% endif %}
+			<td style="float:right;"><small>{{ project.date | date: "%B %Y"}}</small></td>
+		</tr></table>
+		<p>{{ project.description }} <b>{{ project.uses }}.</b></p>
+	{% endfor %}
 </div>

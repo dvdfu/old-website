@@ -5,6 +5,7 @@ $white: #ffffff;
 
 body {
 	background-color: $black-brown !important;
+	overflow-x: hidden;
 }
 
 h1 {
@@ -19,6 +20,10 @@ h2 {
 	font-family: QuicksandRegular;
 	color: $green-blue;
 	text-align: center;
+}
+
+h3 {
+	color: $green-blue;
 }
 
 img {
