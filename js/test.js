@@ -2,7 +2,7 @@ var numCircles = 7;
 var xScreenCenter = $(window).width() / 2;
 var xRingCenter = $(window).width() / 4;
 var yRingCenter = $(window).height() / 2;
-var ringRadius = 180;
+var ringRadius = $(window).width() / 6.5;
 var circleCentered;
 var animShort = 400;
 var animLong = 800;
@@ -11,12 +11,12 @@ $(document).ready(function() {
 	loadItems();
 	$(".circle").hover(function () {
 		var circle = $(this);
-		var icon = $('#icon-' + circle.attr('name'));
+		var icon = $('.icon-' + circle.attr('name'));
 		circle.css('background-color', '#ffffcc');
 		icon.css('color', '#22a044');
 	}, function () {
 		var circle = $(this);
-		var icon = $('#icon-' + circle.attr('name'));
+		var icon = $('.icon-' + circle.attr('name'));
 		circle.css('background-color', '#22a044');
 		icon.css('color', '#ffffcc');
 	});
@@ -38,7 +38,7 @@ function loadItems () {
 	}, animLong);
 
 	for (var i = 1; i <= numCircles; i++) {
-		var circle = $('#circle-' + i);
+		var circle = $('.circle-' + i);
 		var theta = (Math.PI * 2 * (i - 1) - Math.PI * 3) / numCircles;
 		var x = xRingCenter + Math.cos(theta) * ringRadius;
 		var y = yRingCenter + Math.sin(theta) * ringRadius;
@@ -48,17 +48,14 @@ function loadItems () {
 		if (i == 1) {
 			circleEnter(circle);
 		} else {
-			circle.animate({
-				'top': y,
-				'left': x
-			}, animShort);
+			circleExit(circle);
 		}
 	}
 }
 
 function circleEnter(circle) {
 	circleCentered = circle;
-	var w = ringRadius * 2 - 140;
+	var w = ringRadius;
 	circle.animate({
 		'width': w,
 		'height': w,
@@ -69,12 +66,20 @@ function circleEnter(circle) {
 		'left': xRingCenter
 	}, animShort, 'swing', function() {	});
 	circle.attr('clicked', 1);
+
+	$('.panel').css('left', '100%');
+	$('.panel').stop();
+	$('.panel').animate({
+		'left': '50%'
+	}, animLong);
+
 	$('.panel-text').hide();
-	$('#' + circle.attr('name')).show();
+	$('.panel-header').hide();
+	$('.' + circle.attr('name')).show();
 }
 
 function circleExit(circle) {
-	var w = 100;
+	var w = ringRadius / 2;
 	circle.animate({
 		'width': w,
 		'height': w,

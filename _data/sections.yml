@@ -1,27 +1,41 @@
-- id: 1
-  name: about
+- num: 1
+  id: about
   icon: user
+  title: "David Fu"
+  description: "about myself"
 
-- id: 2
-  name: projects
+- num: 2
+  id: projects
   icon: laptop
+  title: "Projects"
+  description: "things I code"
 
-- name: artwork
-  id: 3
+- num: 3
+  id: artwork
   icon: paint-brush
+  title: "Artwork"
+  description: "stuff I draw"
 
-- name: music
-  id: 4
+- num: 4
+  id: music
   icon: music
+  title: "Arrangements"
+  description: "songs I (re)create"
 
-- id: 5
-  name: contact
+- num: 5
+  id: contact
   icon: at
+  title: "Social Media"
+  description: "how to find me"
 
-- id: 6
-  name: resume
+- num: 6
+  id: resume
   icon: file-text
+  title: "Resume"
+  description: "if you're hiring"
 
-- id: 7
-  name: blog
+- num: 7
+  id: blog
   icon: gamepad
+  title: "Game Dev Blog"
+  description: "games in progress"

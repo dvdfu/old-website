@@ -3,16 +3,17 @@
   {% include head.html %}
   <body>
     {% include nav-ring.html %}
-    <div class="panel" id="fixed"></div>
+    <div class="panel panel-bg"></div>
     <div class="panel">
-      {% include page/about.html %}
-      {% include page/projects.html %}
-      {% include page/artwork.html %}
-      {% include page/music.html %}
-      {% include page/contact.html %}
-      {% include page/resume.html %}
-      {% include page/blog.html %}
+      {% for section in site.data.sections %}
+      <div class="panel-header {{ section.id }}">
+        <h1>{{ section.title }}</h1>
+      </div>
+      <div class="panel-text {{ section.id }}">
+        <h2>{{ section.description }}</h2>
+      {% include page/{{ section.id }}.html %}
+      </div>
+      {% endfor %}
     </div>
-    <!-- {% include footer.html %} -->
   </body>
 </html>

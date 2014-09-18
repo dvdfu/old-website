@@ -1,5 +1,5 @@
 {% for section in site.data.sections %}
-<div class="circle" id="circle-{{ section.id }}" name="{{ section.name }}">
-	<span class="fa fa-{{ section.icon }} fa-4x icon" id="icon-{{ section.name }}">
+<div class="circle circle-{{ section.num }}" name="{{ section.id }}">
+	<span class="fa fa-{{ section.icon }} fa-4x icon icon-{{ section.id }}">
 </div>
 {% endfor %}
