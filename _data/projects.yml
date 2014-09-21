@@ -4,6 +4,13 @@
   description: "A 2D desktop game with arcade roots. The player avoids molten rock monsters for as long as possible while also preventing them from falling into and raising the lava below. In progress."
   uses: "Java, libGDX, OpenGL, GLSL, Gradle"
 
+- name: Wordasm
+  url: "http://wordasm.herokuapp.com/"
+  date: 2014-09-01
+  image: "wordasm.png"
+  description: "Online multiplayer word-guessing game developed in a group for the Hack the North hackathon. Players log in using Facebook to play rapid consecutive games, competing to list words from scrambled letters. Worked on front end and client-side Javascript."
+  uses: "jQuery, node.js, Socket.IO, HTML, CSS, Facebook API"
+
 - name: Mineral Miner
   date: 2014-06-01
   image: "gem-1.gif"
