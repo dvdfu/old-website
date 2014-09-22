@@ -18,7 +18,7 @@
   uses: "Java, libGDX, Android SDK, GWT, Gradle"
 
 - name: Personal Website
-  url: "http://dvdfu.me/"
+  url: "http://dvdfu.github.io/"
   date: 2014-09-01
   image: "website.png"
   description: "This website. Written from scratch in roughly three days as first steps into front-end web development. Minimalistic presentation with some interactive elements."
