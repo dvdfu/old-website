@@ -1,6 +1,6 @@
 - name: Scorched
   date: 2014-08-01
-  image: "panic.gif"
+  image: "panic-4.gif"
   description: "A 2D desktop game with arcade roots. The player avoids molten rock monsters for as long as possible while also preventing them from falling into and raising the lava below. In progress."
   uses: "Java, libGDX, OpenGL, GLSL, Gradle"
 
