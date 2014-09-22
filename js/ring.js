@@ -7,6 +7,27 @@ var circleCentered;
 var animShort = 400;
 var animLong = 800;
 
+window.onresize = function(event) {
+	$.fx.off = true;
+	xScreenCenter = $(window).width() / 2;
+	xRingCenter = $(window).width() / 4;
+	yRingCenter = $(window).height() / 2;
+	ringRadius = $(window).width() / 6.5;
+	for (var i = 1; i <= numCircles; i++) {
+		var circle = $('.circle-' + i);
+		var icon = $('.icon-' + circle.attr('name'));
+		icon.css('font-size', ringRadius / 4);
+		var theta = (Math.PI * 2 * (i - 1)) / numCircles - Math.PI / 2;
+		var x = xRingCenter + Math.cos(theta) * ringRadius;
+		var y = yRingCenter + Math.sin(theta) * ringRadius;
+		circle.attr('y-orig', y);
+		circle.attr('x-orig', x);
+		circleExit(circle);
+	}
+	circleEnter(circleCentered);
+	$.fx.off = false;
+};
+
 $(document).ready(function() {
 	loadItems();
 	$(".circle").hover(function () {
