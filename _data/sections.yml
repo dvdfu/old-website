@@ -22,7 +22,7 @@
 - num: 4
   id: music
   icon: music
-  title: "Arrangements"
+  title: "Music"
   description: "songs I (re)create"
   color: "#04422a"
 
@@ -43,6 +43,6 @@
 - num: 7
   id: blog
   icon: gamepad
-  title: "Game Dev Blog"
+  title: "Game Dev"
   description: "games in progress"
   color: "#04422a"

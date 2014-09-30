@@ -5,6 +5,8 @@ $green-blue: #22a044;
 body {
 	background-color: $black-brown !important;
 	overflow-x: hidden;
+	font-family: SourceSansPro;
+	font-size: 120%;
 }
 
 h1 {
@@ -124,4 +126,9 @@ ul {
 @font-face {
     font-family: QuicksandRegular;
     src: url("/fonts/Quicksand-Regular.otf");
+}
+
+@font-face {
+    font-family: SourceSansPro;
+    src: url("/fonts/SourceSansPro.otf");
 }
