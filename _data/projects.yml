@@ -4,6 +4,12 @@
   description: "A 2D desktop game with arcade roots. The player avoids molten rock monsters for as long as possible while also preventing them from falling into and raising the lava below. In progress."
   uses: "Java, libGDX, OpenGL, GLSL, Gradle"
 
+- name: Fiery Flight
+  date: 2014-10-01
+  image: "fiery.gif"
+  description: "A two player cooperative video game developed in two days at the third Games Institute Jam. Winner of the Jammer's Choice Award!"
+  uses: "Java, libGDX"
+
 - name: Wordasm
   url: "http://wordasm.herokuapp.com/"
   date: 2014-09-01
