@@ -28,7 +28,7 @@
   date: 2014-09-01
   image: "website.png"
   description: "This website. Written from scratch in roughly three days as first steps into front-end web development. Minimalistic presentation with some interactive elements."
-  uses: "HTML, CSS, Javascript, jQuery, jekyll, Liquid, GitHub, Font Awesome, Lightbox"
+  uses: "HTML, CSS, Javascript, jQuery, jekyll, Liquid, Tumblr API, JSON, GitHub, Font Awesome, Lightbox"
 
 - name: FindMe
   url: "http://rwongone.github.io/battlehack/lost.html"

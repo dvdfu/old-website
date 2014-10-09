@@ -10,14 +10,14 @@ $(document).ready(function() {
 	    	var posts = tumblr.response.posts;
 	    	console.log(posts);
 	        for (var i in posts) {
-	        	$('#blogfeed').append('<h2 href=' + posts[i].short_url + '>' + posts[i].date + '</h2>');
+	        	$('.blogfeed').append('<h3 href=' + posts[i].short_url + '>' + posts[i].date.substr(0, 10) + '</h3>');
 	        	for (var j in posts[i].photos) {
-	        		$('#blogfeed').append('<a href="' + posts[i].photos[j].original_size.url +
+	        		$('.blogfeed').append('<a href="' + posts[i].photos[j].original_size.url +
 						'" data-lightbox="post' + i + '"><img class="project-images" src="' +
 						posts[i].photos[j].original_size.url + '"></a>');
 	        	}
-	        	$('#blogfeed').append(posts[i].caption);
-	        	$('#blogfeed').append('<div class="divider"></div>');
+	        	$('.blogfeed').append(posts[i].caption);
+	        	$('.blogfeed').append('<div class="divider"></div>');
 	        }
 	    }
 	});
