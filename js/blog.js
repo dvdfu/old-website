@@ -8,7 +8,6 @@ $(document).ready(function() {
 	    dataType: 'jsonp',
 	    success: function(tumblr) {
 	    	var posts = tumblr.response.posts;
-	    	console.log(posts);
 	        for (var i in posts) {
 	        	$('.blogfeed').append('<h3 href=' + posts[i].short_url + '>' + posts[i].date.substr(0, 10) + '</h3>');
 	        	for (var j in posts[i].photos) {

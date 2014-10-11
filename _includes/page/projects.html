@@ -5,7 +5,7 @@
 		{% else %}
 		<td style="float:left;"><h3>{{ project.name }}</h3></td>
 		{% endif %}
-		<td style="float:right;"><small>{{ project.date | date: "%B %Y"}}</small></td>
+		<td style="float:right;"><p>{{ project.date | date: "%B %Y"}}</p></td>
 	</tr></table>
 	{% if project.image %}
 	<a href="/img/projects/{{ project.image }}" data-lightbox="{{ project.name }}">

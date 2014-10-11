@@ -1,9 +1,9 @@
 # Site settings
 title: David Fu
 email: davidf1212@gmail.com
-description: Description
+description: David Fu
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://dvdfu.me" # the base hostname & protocol for your site
 twitter_username: dvdfu
 github_username:  dvdfu
 
