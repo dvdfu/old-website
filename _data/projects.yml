@@ -1,3 +1,10 @@
+- name: Smash Tracker
+  url: "http://smash-tracker.herokuapp.com/"
+  date: 2014-11-01
+  image: "smash-tracker.png"
+  description: "A fun, collaboratively-built webapp to keep track of player wins and losses in Super Smash Bros. Currently in the process of redesigning the front end. Website is still heavily under development."
+  uses: "eRuby, Rails, HTML"
+
 - name: Scorched
   date: 2014-08-01
   image: "panic-4.gif"
